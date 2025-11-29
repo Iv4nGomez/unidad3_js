@@ -12,6 +12,7 @@ captcha.addEventListener('mouseenter', () => {
     mostrarCodigo.removeAttribute('style')
     codigo = getRandomInt()
     mostrarCodigo.textContent = codigo
+    console.log(codigo);
 })
 
 captcha.addEventListener('mouseleave', () => {
@@ -23,7 +24,9 @@ submit.addEventListener('click', (Event) => {
     Event.preventDefault()
     console.log(codigo);
     if (document.formulario.verify.value == codigo) {
-        window.location.href('ej09-FormularioProcesado.html')
+        window.location.href = 'ej09-FormularioProcesado.html'
+    } else {
+        alert('El codigo es invalido!')
     }
 }) 
    
