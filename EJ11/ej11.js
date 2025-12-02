@@ -5,6 +5,27 @@ const aprobados = document.getElementById('aprobados');
 const recuperacion = document.getElementById('recuperacion');
 const repetir = document.getElementById('repetir');
 
+const btnCrear = document.getElementById('btnCrearTablas');
+
+const btnBorrar = document.getElementById('btnBorrarTablas');
+
+const caja = document.getElementById('tablas')
+
+btnCrear.addEventListener('click', () => {
+    caja.innerHTML = "<table border=1><tr>hola mundo</tr></table>"
+    const lista = document.querySelector('#listas ul')
+    const listaAlumnos = [...lista.children]
+    listaAlumnos.forEach(element => {
+        console.log(element);
+        caja.innerHTML += element.outerHTML
+    });
+  
+ 
+})
+
+btnBorrar.addEventListener('click', () => {
+    caja.innerHTML = "";
+})
 
 let posVF = true;
 
